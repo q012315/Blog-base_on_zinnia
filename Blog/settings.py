@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'jz69q8t#j-x8*)2&n(35ghjy=0r%-t%-w%#0ap(sm0@!l10vb4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.qiaojin.store']
 SITE_ID =2
 
 
@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'tagging',
     'zinnia_bootstrap',
     'zinnia',
-
 ]
 
 MIDDLEWARE = [
@@ -138,7 +137,9 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static'),]
-
+UPLOADS_URL = '/uploads/'
+UPLOADSFILES_DIRS = [os.path.join(BASE_DIR,'uploads'),]
 # MEDIA_URL = "/media/"
 # MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # CKEDITOR_UPLOAD_PATH = "article_images"
+ZINNIA_MARKUP_LANGUAGE = 'restructuredtext'
